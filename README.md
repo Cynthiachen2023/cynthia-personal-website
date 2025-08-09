@@ -3,7 +3,7 @@
 Hi, I’m **Cynthia Chen**, a full-stack developer.  
 
 This website is my **interactive resume** and **portfolio**, where you can explore my projects, professional experiences, and technical skills.
-
+![alt text](image.png)
 
 ## About This Website
 
