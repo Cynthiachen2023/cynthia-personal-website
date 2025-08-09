@@ -40,9 +40,7 @@
                     <ol #orderedList>
                         <li *ngFor="let exp of experiencesOrdered; let i = index" [ngClass]="{'selected': i === 0}" data-id="{{ exp.id }}">
                             <div class="header-block">
-                                <div class="logo-block">
-                                    <a href="{{ exp.website }}" target="_blank"><img src="{{ exp.logo }}" alt="{{ exp.companyName }}"></a>
-                                </div>
+
                                 <div class="info-block">
                                     <div class="company-name"><a href="{{ exp.website }}" target="_blank">{{ exp.companyName }}</a></div>
                                     <div class="role" appInternationalization [data]="exp.internationalizations" property='role'>Loading...</div>
@@ -64,7 +62,7 @@
                             </div>
                             <div class="social-media">
                                 <a *ngFor="let media of exp.medias" href="{{ media.http }}" target="_blank">
-                                    <fa-icon [icon]="['fab', media.icon]" class="icon" title="{{ media.title }}"></fa-icon>
+                                    <fa-icon [icon]="[media.iconType || 'fab', media.icon]" class="icon" title="{{ media.title }}"></fa-icon>
                                 </a>
                             </div>
                         </li>
